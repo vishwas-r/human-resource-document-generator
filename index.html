@@ -4,237 +4,312 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Free Employee Address Verification Letter Generator | HR Proof for House Owners</title>
-  <meta name="title" content="Free Employee Address Verification Letter Generator | HR Proof for House Owners">
-  <meta name="description" content="Generate and download official HR Employee Address Verification Letters for new house owners and landlords. Free, instant A4 PDF download with live preview and custom corporate letterhead layout.">
-  <meta name="keywords" content="employee verification letter, address verification proof, landlord employee letter, HR verification document generator, permanent address proof, house owner employee verification, free HR letter generator">
+  <title>Free HR Letter & Certificate Suite | All-in-One Document Generator</title>
+  <meta name="title" content="Free HR Letter & Certificate Suite | All-in-One Document Generator">
+  <meta name="description" content="Generate official HR Address Verification Letters, No-Objection Certificates (NOC), Relieving & Experience Letters, and Internship Certificates. Free A4 PDF export.">
+  <meta name="keywords" content="HR letter generator, NOC generator, relieving letter generator, internship certificate, employee address verification, free HR tools">
   <meta name="author" content="HR Tools & Verification Suite">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#2563eb">
+  <meta name="theme-color" content="#0d6efd">
 
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://github.com">
-  <meta property="og:title" content="Free Employee Address Verification Letter Generator">
-  <meta property="og:description" content="Create & download official HR address verification letters for landlords and house owners in seconds. Includes live A4 preview, logo/signature uploads, and instant PDF export.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&h=630&q=80">
-  <meta property="og:site_name" content="Employee Verification Generator">
-  <meta property="og:locale" content="en_US">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230d6efd'><path d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z'/></svg>">
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://github.com">
-  <meta name="twitter:title" content="Free Employee Address Verification Letter Generator">
-  <meta name="twitter:description" content="Instant HR Address Verification Proof for House Owners. Download high-quality A4 PDF letters right from your browser.">
-  <meta name="twitter:image" content="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&h=630&q=80">
-
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563eb'><path d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z'/></svg>">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
+
   <script src="https://unpkg.com/feather-icons"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
-<body>
-  <div class="app-container">
-    <header class="top-navbar">
-      <div class="brand">
-        <div class="brand-icon">HR</div>
-        <div>
-          <h1 class="brand-title">Employee Verification Letter Generator</h1>
-          <p class="brand-subtitle">Official Address Verification Proof for House Owner / Landlord</p>
+<body class="bg-light">
+
+  <div class="d-flex flex-column vh-100">
+    <header class="navbar navbar-expand-lg navbar-dark bg-primary px-3 shadow-sm z-3">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#">
+          <span class="bg-white text-primary rounded-2 px-2 py-1 fs-6">HR</span>
+          <span>HR Letter & Document Suite</span>
+        </a>
+
+        <div class="d-flex align-items-center gap-2">
+          <button id="btnReset" class="btn btn-outline-light btn-sm d-flex align-items-center gap-1" title="Reset fields">
+            <i data-feather="rotate-ccw" class="icon-sm"></i> <span class="d-none d-sm-inline">Reset</span>
+          </button>
+          <button id="btnDownloadPdf" class="btn btn-light text-primary btn-sm fw-semibold d-flex align-items-center gap-1" title="Download vector PDF">
+            <i data-feather="download" class="icon-sm"></i> Download PDF
+          </button>
+          <button id="btnPrint" class="btn btn-warning btn-sm text-dark fw-semibold d-flex align-items-center gap-1" title="Print document">
+            <i data-feather="printer" class="icon-sm"></i> Print
+          </button>
         </div>
-      </div>
-      <div class="nav-actions">
-        <button id="btnReset" class="btn btn-outline" title="Reset all fields to sample defaults">
-          <i data-feather="rotate-ccw"></i> Reset
-        </button>
-        <button id="btnDownloadPdf" class="btn btn-secondary" title="Download PDF document directly using jsPDF">
-          <i data-feather="download"></i> Download PDF
-        </button>
-        <button id="btnPrint" class="btn btn-primary" title="Print letter or save via browser dialog">
-          <i data-feather="printer"></i> Print / Browser PDF
-        </button>
       </div>
     </header>
 
-    <main class="main-content">
-      <aside class="editor-sidebar">
-        <div class="sidebar-section">
-          <div class="section-header">
-            <i data-feather="briefcase" class="section-icon"></i>
-            <span>Company Information</span>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="inpCompanyName">Company Name</label>
-            <input type="text" id="inpCompanyName" class="form-control" value="Acme Global Solutions Pvt. Ltd.">
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="inpCompanySub">Company Address & Contact Info</label>
-            <input type="text" id="inpCompanySub" class="form-control" value="Tech Park Phase-2, Outer Ring Road, Bengaluru, Karnataka - 560103 | hr@acmeglobal.com">
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="inpLogoUpload">Company Logo (Optional)</label>
-            <input type="file" id="inpLogoUpload" class="form-control" accept="image/*">
+    <div class="flex-grow-1 d-flex overflow-hidden">
+      <aside class="editor-sidebar bg-white border-end d-flex flex-column overflow-y-auto shadow-sm">
+        
+        <div class="p-3 border-bottom bg-light">
+          <label class="form-label fw-bold text-uppercase fs-7 text-muted mb-2">Select Document Type</label>
+          <div class="nav nav-pills nav-fill gap-1" id="docTypeTabs">
+            <button class="nav-link active btn-sm" data-doc-type="verification">Address Proof</button>
+            <button class="nav-link btn-sm" data-doc-type="noc">NOC Letter</button>
+            <button class="nav-link btn-sm" data-doc-type="relieving">Relieving</button>
+            <button class="nav-link btn-sm" data-doc-type="internship">Internship</button>
           </div>
         </div>
 
-        <div class="sidebar-section">
-          <div class="section-header">
-            <i data-feather="user-check" class="section-icon"></i>
-            <span>Employee Information</span>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="inpEmpName">Employee Full Name</label>
-              <input type="text" id="inpEmpName" class="form-control" value="Viraj">
+        <div class="accordion accordion-flush flex-grow-1" id="editorAccordion">
+          
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#secCompany">
+                <i data-feather="briefcase" class="text-primary me-2 icon-sm"></i> Company Details & Logo
+              </button>
+            </h2>
+            <div id="secCompany" class="accordion-collapse collapse show" data-bs-parent="#editorAccordion">
+              <div class="accordion-body">
+                <div class="mb-3">
+                  <label class="form-label fs-7 fw-medium" for="inpCompanyName">Company Name</label>
+                  <input type="text" id="inpCompanyName" class="form-control form-control-sm" value="Acme Global Solutions Pvt. Ltd.">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fs-7 fw-medium" for="inpCompanySub">Address & Contact Info</label>
+                  <input type="text" id="inpCompanySub" class="form-control form-control-sm" value="Tech Park Phase-2, Outer Ring Road, Bengaluru - 560103 | hr@acmeglobal.com">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label fs-7 fw-medium d-flex justify-content-between align-items-center" for="inpPrimaryColor">
+                    <span>Accent Brand Color</span>
+                    <span id="valColorHex" class="badge bg-light text-dark font-monospace fs-8 border">#0d6efd</span>
+                  </label>
+                  <div class="d-flex align-items-center gap-2">
+                    <input type="color" id="inpPrimaryColor" class="form-control form-control-color form-control-sm" value="#0d6efd" title="Choose brand color">
+                    <div class="d-flex gap-1">
+                      <button type="button" class="btn btn-sm p-0 color-swatch" data-color="#0d6efd" style="background-color: #0d6efd; width: 22px; height: 22px; border-radius: 4px; border: 1px solid #ccc;"></button>
+                      <button type="button" class="btn btn-sm p-0 color-swatch" data-color="#10b981" style="background-color: #10b981; width: 22px; height: 22px; border-radius: 4px; border: 1px solid #ccc;"></button>
+                      <button type="button" class="btn btn-sm p-0 color-swatch" data-color="#6f42c1" style="background-color: #6f42c1; width: 22px; height: 22px; border-radius: 4px; border: 1px solid #ccc;"></button>
+                      <button type="button" class="btn btn-sm p-0 color-swatch" data-color="#dc3545" style="background-color: #dc3545; width: 22px; height: 22px; border-radius: 4px; border: 1px solid #ccc;"></button>
+                      <button type="button" class="btn btn-sm p-0 color-swatch" data-color="#111827" style="background-color: #111827; width: 22px; height: 22px; border-radius: 4px; border: 1px solid #ccc;"></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="mb-0">
+                  <label class="form-label fs-7 fw-medium" for="inpLogoUpload">Company Logo</label>
+                  <input type="file" id="inpLogoUpload" class="form-control form-control-sm" accept="image/*">
+                </div>
+              </div>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="inpEmpId">Employee ID</label>
-              <input type="text" id="inpEmpId" class="form-control" value="EMP-94821">
-            </div>
           </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="inpDesignation">Designation</label>
-              <input type="text" id="inpDesignation" class="form-control" value="Senior Software Engineer">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="inpDepartment">Department</label>
-              <input type="text" id="inpDepartment" class="form-control" value="Engineering">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="inpDoj">Date of Joining</label>
-            <input type="text" id="inpDoj" class="form-control" value="August 12, 2021">
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="inpPermanentAddress">Permanent Address (as per records)</label>
-            <textarea id="inpPermanentAddress" class="form-control" rows="3">#45, 3rd Main Road, Greenfield Enclave,
-Indiranagar 1st Stage,
-Bengaluru, Karnataka - 560038, India</textarea>
-          </div>
-        </div>
 
-        <div class="sidebar-section">
-          <div class="section-header">
-            <i data-feather="home" class="section-icon"></i>
-            <span>House Owner & Reference</span>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="inpRefNo">Reference No.</label>
-              <input type="text" id="inpRefNo" class="form-control" value="AGS/HR/VER/2026/0491">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#secEmployee">
+                <i data-feather="user-check" class="text-primary me-2 icon-sm"></i> Candidate / Employee Info
+              </button>
+            </h2>
+            <div id="secEmployee" class="accordion-collapse collapse" data-bs-parent="#editorAccordion">
+              <div class="accordion-body">
+                <div class="row g-2 mb-3">
+                  <div class="col-6">
+                    <label class="form-label fs-7 fw-medium" for="inpEmpName">Full Name</label>
+                    <input type="text" id="inpEmpName" class="form-control form-control-sm" value="Viraj Sharma">
+                  </div>
+                  <div class="col-6">
+                    <label class="form-label fs-7 fw-medium" for="inpEmpId">Employee / Roll ID</label>
+                    <input type="text" id="inpEmpId" class="form-control form-control-sm" value="EMP-94821">
+                  </div>
+                </div>
+                <div class="row g-2 mb-3">
+                  <div class="col-6">
+                    <label class="form-label fs-7 fw-medium" for="inpDesignation">Designation</label>
+                    <input type="text" id="inpDesignation" class="form-control form-control-sm" value="Software Engineer">
+                  </div>
+                  <div class="col-6">
+                    <label class="form-label fs-7 fw-medium" for="inpDepartment">Department</label>
+                    <input type="text" id="inpDepartment" class="form-control form-control-sm" value="Engineering">
+                  </div>
+                </div>
+                <div class="row g-2 mb-0">
+                  <div class="col-6">
+                    <label class="form-label fs-7 fw-medium" for="inpRefNo">Ref No.</label>
+                    <input type="text" id="inpRefNo" class="form-control form-control-sm" value="AGS/HR/2026/0491">
+                  </div>
+                  <div class="col-6">
+                    <label class="form-label fs-7 fw-medium" for="inpDate">Issue Date</label>
+                    <input type="text" id="inpDate" class="form-control form-control-sm" value="">
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="inpDate">Issue Date</label>
-              <input type="text" id="inpDate" class="form-control" value="">
-            </div>
           </div>
-          <div class="form-group">
-            <label class="form-label" for="inpLandlordName">House Owner / Landlord Name</label>
-            <input type="text" id="inpLandlordName" class="form-control" value="Mr. Rajesh Kumar">
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="inpHrEmail">HR Contact Email / Phone</label>
-            <input type="text" id="inpHrEmail" class="form-control" value="verification@acmeglobal.com | +91 80 4910 8800">
-          </div>
-        </div>
 
-        <div class="sidebar-section">
-          <div class="section-header">
-            <i data-feather="award" class="section-icon"></i>
-            <span>Authorized Signatory</span>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="inpSignatoryName">Signatory Name</label>
-            <input type="text" id="inpSignatoryName" class="form-control" value="Anvika">
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="inpSignatoryDesig">Designation</label>
-              <input type="text" id="inpSignatoryDesig" class="form-control" value="Head of Human Resources">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#secDocDetails">
+                <i data-feather="file-text" class="text-primary me-2 icon-sm"></i> Document Fields
+              </button>
+            </h2>
+            <div id="secDocDetails" class="accordion-collapse collapse" data-bs-parent="#editorAccordion">
+              <div class="accordion-body">
+                
+                <div id="fieldsVerification" class="doc-fields-group">
+                  <div class="mb-3">
+                    <label class="form-label fs-7 fw-medium" for="inpPermanentAddress">Permanent Address</label>
+                    <textarea id="inpPermanentAddress" class="form-control form-control-sm" rows="3">#45, 3rd Main Road, Greenfield Enclave,
+Indiranagar 1st Stage, Bengaluru - 560038</textarea>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label fs-7 fw-medium" for="inpLandlordName">House Owner / Landlord Name</label>
+                    <input type="text" id="inpLandlordName" class="form-control form-control-sm" value="Mr. Rajesh Kumar">
+                  </div>
+                  <div class="mb-0">
+                    <label class="form-label fs-7 fw-medium" for="inpHrEmail">HR Contact Info</label>
+                    <input type="text" id="inpHrEmail" class="form-control form-control-sm" value="verification@acmeglobal.com | +91 80 4910 8800">
+                  </div>
+                </div>
+
+                <div id="fieldsNoc" class="doc-fields-group d-none">
+                  <div class="mb-3">
+                    <label class="form-label fs-7 fw-medium" for="inpNocPurpose">NOC Purpose</label>
+                    <select id="inpNocPurpose" class="form-select form-select-sm">
+                      <option value="Passport & Visa Application">Passport & Visa Application</option>
+                      <option value="International Higher Studies">International Higher Studies</option>
+                      <option value="Official Foreign Travel">Official Foreign Travel</option>
+                      <option value="External Certification & Side Project">External Certification & Side Project</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label fs-7 fw-medium" for="inpIdNumber">Passport / National ID No.</label>
+                    <input type="text" id="inpIdNumber" class="form-control form-control-sm" value="Z-8492019">
+                  </div>
+                  <div class="mb-0">
+                    <label class="form-label fs-7 fw-medium" for="inpTargetEntity">Target Authority / Embassy</label>
+                    <input type="text" id="inpTargetEntity" class="form-control form-control-sm" value="Regional Passport Office / Embassy Authorities">
+                  </div>
+                </div>
+
+                <div id="fieldsRelieving" class="doc-fields-group d-none">
+                  <div class="row g-2 mb-3">
+                    <div class="col-6">
+                      <label class="form-label fs-7 fw-medium" for="inpDojRelieving">Date of Joining</label>
+                      <input type="text" id="inpDojRelieving" class="form-control form-control-sm" value="August 12, 2021">
+                    </div>
+                    <div class="col-6">
+                      <label class="form-label fs-7 fw-medium" for="inpDol">Relieving Date</label>
+                      <input type="text" id="inpDol" class="form-control form-control-sm" value="July 31, 2026">
+                    </div>
+                  </div>
+                  <div class="mb-0">
+                    <label class="form-label fs-7 fw-medium" for="inpConductNote">Conduct & Performance Note</label>
+                    <input type="text" id="inpConductNote" class="form-control form-control-sm" value="satisfactory, professional, and ethical throughout the tenure">
+                  </div>
+                </div>
+
+                <div id="fieldsInternship" class="doc-fields-group d-none">
+                  <div class="row g-2 mb-3">
+                    <div class="col-6">
+                      <label class="form-label fs-7 fw-medium" for="inpInternStart">Start Date</label>
+                      <input type="text" id="inpInternStart" class="form-control form-control-sm" value="January 10, 2026">
+                    </div>
+                    <div class="col-6">
+                      <label class="form-label fs-7 fw-medium" for="inpInternEnd">End Date</label>
+                      <input type="text" id="inpInternEnd" class="form-control form-control-sm" value="July 10, 2026">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label fs-7 fw-medium" for="inpProjectDomain">Project Title / Domain</label>
+                    <input type="text" id="inpProjectDomain" class="form-control form-control-sm" value="Full-Stack Web Development & Cloud Architecture">
+                  </div>
+                  <div class="mb-0">
+                    <label class="form-label fs-7 fw-medium" for="inpMentorName">Mentor / Supervisor</label>
+                    <input type="text" id="inpMentorName" class="form-control form-control-sm" value="Dr. Aris Thorne">
+                  </div>
+                </div>
+
+              </div>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="inpSignatoryDept">Department</label>
-              <input type="text" id="inpSignatoryDept" class="form-control" value="People Operations">
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-semibold text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#secSignatory">
+                <i data-feather="award" class="text-primary me-2 icon-sm"></i> Authorized Signatory
+              </button>
+            </h2>
+            <div id="secSignatory" class="accordion-collapse collapse" data-bs-parent="#editorAccordion">
+              <div class="accordion-body">
+                <div class="mb-3">
+                  <label class="form-label fs-7 fw-medium" for="inpSignatoryName">Signatory Full Name</label>
+                  <input type="text" id="inpSignatoryName" class="form-control form-control-sm" value="Anvika Deshmukh">
+                </div>
+                <div class="row g-2 mb-3">
+                  <div class="col-6">
+                    <label class="form-label fs-7 fw-medium" for="inpSignatoryDesig">Designation</label>
+                    <input type="text" id="inpSignatoryDesig" class="form-control form-control-sm" value="Head of Human Resources">
+                  </div>
+                  <div class="col-6">
+                    <label class="form-label fs-7 fw-medium" for="inpSignatoryDept">Department</label>
+                    <input type="text" id="inpSignatoryDept" class="form-control form-control-sm" value="People Operations">
+                  </div>
+                </div>
+                <div class="mb-0">
+                  <label class="form-label fs-7 fw-medium" for="inpSigUpload">Digital Signature Image</label>
+                  <input type="file" id="inpSigUpload" class="form-control form-control-sm" accept="image/*">
+                </div>
+              </div>
             </div>
           </div>
-          <div class="form-group">
-            <label class="form-label" for="inpSigUpload">Digital Signature Image (Optional)</label>
-            <input type="file" id="inpSigUpload" class="form-control" accept="image/*">
-          </div>
+
         </div>
       </aside>
 
-      <section class="preview-workspace">
-        <div class="preview-toolbar">
-          <i data-feather="eye"></i> Live A4 Print & Export Preview
+      <section class="preview-workspace flex-grow-1 bg-secondary-subtle p-3 p-lg-4 overflow-y-auto d-flex flex-column align-items-center">
+        
+        <div class="preview-toolbar bg-white px-3 py-1 rounded-pill shadow-sm fs-7 text-muted mb-3 d-flex align-items-center gap-2">
+          <i data-feather="eye" class="icon-sm text-primary"></i>
+          <span>Live A4 Letterhead Preview</span>
         </div>
 
-        <div class="a4-document" id="letterPaper">
-          <header class="lh-header">
+        <div class="a4-document bg-white shadow-lg rounded-1 p-4 p-md-5 d-flex flex-column justify-content-between" id="letterPaper">
+          
+          <header class="lh-header border-bottom border-primary border-2 pb-3 mb-4 d-flex justify-content-between align-items-start">
             <div>
-              <h2 class="lh-company-title" id="valCompanyName">Acme Global Solutions Pvt. Ltd.</h2>
-              <div class="lh-company-sub" id="valCompanySub">Tech Park Phase-2, Outer Ring Road, Bengaluru, Karnataka - 560103 | hr@acmeglobal.com</div>
+              <h2 class="lh-company-title fw-bold text-dark mb-1" id="valCompanyName">Acme Global Solutions Pvt. Ltd.</h2>
+              <div class="lh-company-sub text-secondary fs-7" id="valCompanySub">Tech Park Phase-2, Outer Ring Road, Bengaluru - 560103 | hr@acmeglobal.com</div>
             </div>
             <div class="lh-logo-container">
-              <img id="imgCompanyLogo" class="lh-logo-img" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' width='200' height='60'><rect width='40' height='40' x='5' y='10' rx='8' fill='%232563eb'/><path d='M 25 18 L 35 38 L 15 38 Z' fill='%23ffffff'/><circle cx='25' cy='30' r='4' fill='%2360a5fa'/><text x='55' y='32' font-family='sans-serif' font-weight='700' font-size='20' fill='%230f172a'>ACME</text><text x='55' y='44' font-family='sans-serif' font-weight='500' font-size='10' fill='%2364748b'>GLOBAL SOLUTIONS</text></svg>" alt="Company Logo" style="display: block;">
+              <img id="imgCompanyLogo" class="lh-logo-img" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' width='200' height='60'><rect width='40' height='40' x='5' y='10' rx='8' fill='%230d6efd'/><path d='M 25 18 L 35 38 L 15 38 Z' fill='%23ffffff'/><circle cx='25' cy='30' r='4' fill='%236ea8fe'/><text x='55' y='32' font-family='sans-serif' font-weight='700' font-size='20' fill='%230f172a'>ACME</text><text x='55' y='44' font-family='sans-serif' font-weight='500' font-size='10' fill='%2364748b'>GLOBAL SOLUTIONS</text></svg>" alt="Company Logo" style="display: block;">
             </div>
           </header>
 
-          <div class="lh-date-row">
-            <div id="refNoWrapper"><strong>Ref No:</strong> <span id="valRefNo">AGS/HR/VER/2026/0491</span></div>
+          <div class="lh-date-row d-flex justify-content-between fs-7 text-dark-emphasis mb-4">
+            <div id="refNoWrapper"><strong>Ref No:</strong> <span id="valRefNo">AGS/HR/2026/0491</span></div>
             <div id="dateWrapper"><strong>Date:</strong> <span id="valDate">July 24, 2026</span></div>
           </div>
 
-          <div class="lh-subject">
+          <div class="lh-subject text-center fw-bold fs-6 text-uppercase text-decoration-underline text-dark mb-4" id="valDocSubject">
             TO WHOM IT MAY CONCERN
           </div>
 
-          <article class="lh-body">
-            <p id="certifyPara">
-              This is to certify that <strong><span id="valEmpName" class="highlight-val">Viraj</span></strong>,
-              bearing Employee ID <strong><span id="valEmpId" class="highlight-val">EMP-94821</span></strong>, is a
-              full-time employee of <strong><span id="valCompanyName">Acme Global Solutions Pvt. Ltd.</span></strong>
-              working as <strong><span id="valDesignation">Senior Software Engineer</span></strong> in the <strong><span id="valDepartment">Engineering</span></strong> Department since <strong><span id="valDoj">August 12, 2021</span></strong>.
-            </p>
-
-            <p>
-              As per our official company records, the permanent address of the employee is as follows:
-            </p>
-
-            <div class="address-box">
-              <div class="address-box-header">PERMANENT ADDRESS AS PER COMPANY RECORDS</div>
-              <div class="address-box-content" id="valPermanentAddress">#45, 3rd Main Road, Greenfield Enclave,
-Indiranagar 1st Stage,
-Bengaluru, Karnataka - 560038, India</div>
-            </div>
-
-            <p id="landlordPara">
-              This verification letter is issued upon the request of the employee for submission to their house owner /
-              landlord (<strong><span id="valLandlordName">Mr. Rajesh Kumar</span></strong>) for tenancy and residential
-              verification purposes.
-            </p>
-
-            <p id="hrContactPara">
-              Should you require any further verification or information, please feel free to contact our Human
-              Resources Department at <span id="valHrEmail">verification@acmeglobal.com | +91 80 4910 8800</span>.
-            </p>
+          <article class="lh-body flex-grow-1 fs-6 text-dark" id="valDocBody">
           </article>
 
-          <div class="lh-signoff">
-            <div class="lh-sign-title" id="signOffTitle">For <span id="valSignCompany">Acme Global Solutions Pvt. Ltd.</span></div>
-            <img id="imgSignature" class="signature-image" src="" alt="Authorized Signature" style="display: none;">
-            <div class="lh-signatory-name" id="valSignatoryName">Anvika</div>
-            <div class="lh-signatory-desig" id="valSignatoryLine">Head of Human Resources (People Operations)</div>
+          <div class="lh-signoff mt-5 pt-3">
+            <div class="lh-sign-title fw-bold fs-6 text-dark mb-4" id="signOffTitle">For Acme Global Solutions Pvt. Ltd.</div>
+            <img id="imgSignature" class="signature-image mb-2" src="" alt="Authorized Signature" style="display: none;">
+            <div class="lh-signatory-name fw-bold text-dark" id="valSignatoryName">Anvika Deshmukh</div>
+            <div class="lh-signatory-desig fs-7 text-secondary" id="valSignatoryLine">Head of Human Resources (People Operations)</div>
           </div>
 
-          <footer class="lh-footer">
-            <div>Official HR Document | Address Verification Proof</div>
+          <footer class="lh-footer border-top pt-2 mt-4 d-flex justify-content-between fs-8 text-muted">
+            <div>Official HR Document | Verification & Certification Suite</div>
             <div>Page 1 of 1</div>
           </footer>
+
         </div>
+
       </section>
-    </main>
+    </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/script.js"></script>
   <script>
     feather.replace();
