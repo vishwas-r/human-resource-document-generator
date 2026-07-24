@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Free Employee Address Verification Letter Generator | HR Proof for House Owners</title>
+  <meta name="title" content="Free Employee Address Verification Letter Generator | HR Proof for House Owners">
+  <meta name="description" content="Generate and download official HR Employee Address Verification Letters for new house owners and landlords. Free, instant A4 PDF download with live preview and custom corporate letterhead layout.">
+  <meta name="keywords" content="employee verification letter, address verification proof, landlord employee letter, HR verification document generator, permanent address proof, house owner employee verification, free HR letter generator">
+  <meta name="author" content="HR Tools & Verification Suite">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#2563eb">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com">
+  <meta property="og:title" content="Free Employee Address Verification Letter Generator">
+  <meta property="og:description" content="Create & download official HR address verification letters for landlords and house owners in seconds. Includes live A4 preview, logo/signature uploads, and instant PDF export.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&h=630&q=80">
+  <meta property="og:site_name" content="Employee Verification Generator">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://github.com">
+  <meta name="twitter:title" content="Free Employee Address Verification Letter Generator">
+  <meta name="twitter:description" content="Instant HR Address Verification Proof for House Owners. Download high-quality A4 PDF letters right from your browser.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&h=630&q=80">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563eb'><path d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z'/></svg>">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    <header class="top-navbar">
+      <div class="brand">
+        <div class="brand-icon">HR</div>
+        <div>
+          <h1 class="brand-title">Employee Verification Letter Generator</h1>
+          <p class="brand-subtitle">Official Address Verification Proof for House Owner / Landlord</p>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <button id="btnReset" class="btn btn-outline" title="Reset all fields to sample defaults">
+          <i data-feather="rotate-ccw"></i> Reset
+        </button>
+        <button id="btnDownloadPdf" class="btn btn-secondary" title="Download PDF document directly using jsPDF">
+          <i data-feather="download"></i> Download PDF
+        </button>
+        <button id="btnPrint" class="btn btn-primary" title="Print letter or save via browser dialog">
+          <i data-feather="printer"></i> Print / Browser PDF
+        </button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <aside class="editor-sidebar">
+        <div class="sidebar-section">
+          <div class="section-header">
+            <i data-feather="briefcase" class="section-icon"></i>
+            <span>Company Information</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="inpCompanyName">Company Name</label>
+            <input type="text" id="inpCompanyName" class="form-control" value="Acme Global Solutions Pvt. Ltd.">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="inpCompanySub">Company Address & Contact Info</label>
+            <input type="text" id="inpCompanySub" class="form-control" value="Tech Park Phase-2, Outer Ring Road, Bengaluru, Karnataka - 560103 | hr@acmeglobal.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="inpLogoUpload">Company Logo (Optional)</label>
+            <input type="file" id="inpLogoUpload" class="form-control" accept="image/*">
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="section-header">
+            <i data-feather="user-check" class="section-icon"></i>
+            <span>Employee Information</span>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="inpEmpName">Employee Full Name</label>
+              <input type="text" id="inpEmpName" class="form-control" value="Viraj">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="inpEmpId">Employee ID</label>
+              <input type="text" id="inpEmpId" class="form-control" value="EMP-94821">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="inpDesignation">Designation</label>
+              <input type="text" id="inpDesignation" class="form-control" value="Senior Software Engineer">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="inpDepartment">Department</label>
+              <input type="text" id="inpDepartment" class="form-control" value="Engineering">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="inpDoj">Date of Joining</label>
+            <input type="text" id="inpDoj" class="form-control" value="August 12, 2021">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="inpPermanentAddress">Permanent Address (as per records)</label>
+            <textarea id="inpPermanentAddress" class="form-control" rows="3">#45, 3rd Main Road, Greenfield Enclave,
+Indiranagar 1st Stage,
+Bengaluru, Karnataka - 560038, India</textarea>
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="section-header">
+            <i data-feather="home" class="section-icon"></i>
+            <span>House Owner & Reference</span>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="inpRefNo">Reference No.</label>
+              <input type="text" id="inpRefNo" class="form-control" value="AGS/HR/VER/2026/0491">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="inpDate">Issue Date</label>
+              <input type="text" id="inpDate" class="form-control" value="">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="inpLandlordName">House Owner / Landlord Name</label>
+            <input type="text" id="inpLandlordName" class="form-control" value="Mr. Rajesh Kumar">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="inpHrEmail">HR Contact Email / Phone</label>
+            <input type="text" id="inpHrEmail" class="form-control" value="verification@acmeglobal.com | +91 80 4910 8800">
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="section-header">
+            <i data-feather="award" class="section-icon"></i>
+            <span>Authorized Signatory</span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="inpSignatoryName">Signatory Name</label>
+            <input type="text" id="inpSignatoryName" class="form-control" value="Anvika">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="inpSignatoryDesig">Designation</label>
+              <input type="text" id="inpSignatoryDesig" class="form-control" value="Head of Human Resources">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="inpSignatoryDept">Department</label>
+              <input type="text" id="inpSignatoryDept" class="form-control" value="People Operations">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="inpSigUpload">Digital Signature Image (Optional)</label>
+            <input type="file" id="inpSigUpload" class="form-control" accept="image/*">
+          </div>
+        </div>
+      </aside>
+
+      <section class="preview-workspace">
+        <div class="preview-toolbar">
+          <i data-feather="eye"></i> Live A4 Print & Export Preview
+        </div>
+
+        <div class="a4-document" id="letterPaper">
+          <header class="lh-header">
+            <div>
+              <h2 class="lh-company-title" id="valCompanyName">Acme Global Solutions Pvt. Ltd.</h2>
+              <div class="lh-company-sub" id="valCompanySub">Tech Park Phase-2, Outer Ring Road, Bengaluru, Karnataka - 560103 | hr@acmeglobal.com</div>
+            </div>
+            <div class="lh-logo-container">
+              <img id="imgCompanyLogo" class="lh-logo-img" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60' width='200' height='60'><rect width='40' height='40' x='5' y='10' rx='8' fill='%232563eb'/><path d='M 25 18 L 35 38 L 15 38 Z' fill='%23ffffff'/><circle cx='25' cy='30' r='4' fill='%2360a5fa'/><text x='55' y='32' font-family='sans-serif' font-weight='700' font-size='20' fill='%230f172a'>ACME</text><text x='55' y='44' font-family='sans-serif' font-weight='500' font-size='10' fill='%2364748b'>GLOBAL SOLUTIONS</text></svg>" alt="Company Logo" style="display: block;">
+            </div>
+          </header>
+
+          <div class="lh-date-row">
+            <div id="refNoWrapper"><strong>Ref No:</strong> <span id="valRefNo">AGS/HR/VER/2026/0491</span></div>
+            <div id="dateWrapper"><strong>Date:</strong> <span id="valDate">July 24, 2026</span></div>
+          </div>
+
+          <div class="lh-subject">
+            TO WHOM IT MAY CONCERN
+          </div>
+
+          <article class="lh-body">
+            <p id="certifyPara">
+              This is to certify that <strong><span id="valEmpName" class="highlight-val">Viraj</span></strong>,
+              bearing Employee ID <strong><span id="valEmpId" class="highlight-val">EMP-94821</span></strong>, is a
+              full-time employee of <strong><span id="valCompanyName">Acme Global Solutions Pvt. Ltd.</span></strong>
+              working as <strong><span id="valDesignation">Senior Software Engineer</span></strong> in the <strong><span id="valDepartment">Engineering</span></strong> Department since <strong><span id="valDoj">August 12, 2021</span></strong>.
+            </p>
+
+            <p>
+              As per our official company records, the permanent address of the employee is as follows:
+            </p>
+
+            <div class="address-box">
+              <div class="address-box-header">PERMANENT ADDRESS AS PER COMPANY RECORDS</div>
+              <div class="address-box-content" id="valPermanentAddress">#45, 3rd Main Road, Greenfield Enclave,
+Indiranagar 1st Stage,
+Bengaluru, Karnataka - 560038, India</div>
+            </div>
+
+            <p id="landlordPara">
+              This verification letter is issued upon the request of the employee for submission to their house owner /
+              landlord (<strong><span id="valLandlordName">Mr. Rajesh Kumar</span></strong>) for tenancy and residential
+              verification purposes.
+            </p>
+
+            <p id="hrContactPara">
+              Should you require any further verification or information, please feel free to contact our Human
+              Resources Department at <span id="valHrEmail">verification@acmeglobal.com | +91 80 4910 8800</span>.
+            </p>
+          </article>
+
+          <div class="lh-signoff">
+            <div class="lh-sign-title" id="signOffTitle">For <span id="valSignCompany">Acme Global Solutions Pvt. Ltd.</span></div>
+            <img id="imgSignature" class="signature-image" src="" alt="Authorized Signature" style="display: none;">
+            <div class="lh-signatory-name" id="valSignatoryName">Anvika</div>
+            <div class="lh-signatory-desig" id="valSignatoryLine">Head of Human Resources (People Operations)</div>
+          </div>
+
+          <footer class="lh-footer">
+            <div>Official HR Document | Address Verification Proof</div>
+            <div>Page 1 of 1</div>
+          </footer>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/script.js"></script>
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>
